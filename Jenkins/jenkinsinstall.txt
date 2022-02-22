@@ -12,6 +12,8 @@ EOL
   sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 3 . sudo apt update
 4.  sudo apt install jenkins
+5. sudo systemctl start jenkins
+ 6. sudo systemctl enable jenkins
 Modify Firewall to Allow Jenkins
   sudo ufw allow 8080
   sudo ufw status
