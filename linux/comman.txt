@@ -1,0 +1,8 @@
+List all the user 
+-> cat  /etc/passwd
+Delete user
+-> sudo deluser --remove-home <username>
+List all the services running
+-> cat /etc/services
+List of all the running ports
+-> sudo netstat -tulpn | grep LISTEN
