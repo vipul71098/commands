@@ -1,0 +1,16 @@
+Step 1: Import repository GPG Key
+  sudo apt update
+  wget -qO - https://api.bintray.com/orgs/jfrog/keys/gpg/public.key | sudo apt-key add -
+Step 2: Add JFrog Artifactory to Ubuntu 20.04
+  echo "deb https://jfrog.bintray.com/artifactory-debs focal main" | sudo tee /etc/apt/sources.list.d/jfrog.list
+  sudo apt update
+Step 3: Install JFrog Artifactory on Ubuntu 20.04
+  sudo apt update
+  sudo apt install jfrog-artifactory-oss
+  
+Start and enable the service:
+  sudo systemctl start artifactory.service
+  sudo systemctl enable artifactory.service
+  
+Step 4: Access Artifactory Web Interface
+  http://SERVERIP_OR_DOMAIN:8081/artifactory﻿
