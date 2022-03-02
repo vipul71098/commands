@@ -1,1 +1,6 @@
 
+download sonnarqube 
+-> wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.3.0.51899.zip
+unzip folder
+-> sudo unzip sonarqube-9.3.0.51899.zip
+ check java-jdk version 11 is installed
