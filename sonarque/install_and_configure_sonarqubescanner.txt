@@ -4,3 +4,27 @@ download sonnarqube
 unzip folder
 -> sudo unzip sonarqube-9.3.0.51899.zip
  check java-jdk version 11 is installed
+ create the sonar user
+ -> addusre sonar
+ change the permmisjon for sonar dir
+ -> chown  -R sonar:sonar /opt/sonar/
+ switch to sonar user
+ -> su - sonar
+ edit  sonar.properties file in location /opt/sonarqube-9.3.0.51899/conf
+   sonar.jdbc.username=sonar
+   sonar.jdbc.password=sonar
+   sonar.jdbc.url=jdbc:postgresql://localhost:sonar
+   sonar.path.data=/var/sonarqube/data
+   sonar.path.temp=/var/sonar/temp
+   
+ add following line at the end of sysctl.conf file at location /etc/systemctl.conf
+  vm.max_map_count=524288
+  fs.file-max=131072
+ add following line at the end of limits.conf at location /etc/security/limits.conf
+  sonar hard nofile 65535
+  sonar soft nofile 65535
+ 
+ create a sinarube dir
+ -> mkdir /var/sonarqube/
+change the i=ownership
+-> chown -R sonar:sonar /var/sonarqube/
