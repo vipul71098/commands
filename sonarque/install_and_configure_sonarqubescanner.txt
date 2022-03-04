@@ -17,7 +17,7 @@ unzip folder
    sonar.path.data=/var/sonarqube/data
    sonar.path.temp=/var/sonar/temp
    
- add following line at the end of sysctl.conf file at location /etc/systemctl.conf
+ add following line at the end of sysctl.conf file at location /etc/sysctl.conf
   vm.max_map_count=524288
   fs.file-max=131072
  add following line at the end of limits.conf at location /etc/security/limits.conf
