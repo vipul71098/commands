@@ -1,5 +1,5 @@
 install java
-sudo apt-get -y install openjdk-8-jdk openjdk-8-jre
+sudo apt-get -y install openjdk-11-jdk openjdk-11-jre
 Set JAVA_HOME Variables
 
 cat >> /etc/environment <<EOL
